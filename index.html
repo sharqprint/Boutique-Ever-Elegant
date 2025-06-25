@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>بوتيك إيفر إليجانت</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('background.png') no-repeat center center fixed;
+      background-color: #1a001f;
+      background-size: cover;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .social-icons {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .social-icon {
+      display: inline-block;
+      text-align: center;
+      margin: 0 25px;
+      font-size: 1.2em;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 8px;
+      transition: transform 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .social-icon:hover img {
+      transform: scale(1.2);
+    }
+
+    .social-icon a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .social-icon:hover {
+      color: #f09d91;
+    }
+
+    .address {
+      text-align: center;
+      font-size: 1em;
+      margin: 20px 0;
+    }
+
+    .phone {
+      display: block;
+      text-align: center;
+      font-size: 1.2em;
+      color: #f09d91;
+      cursor: pointer;
+      margin: 30px 0;
+      transition: transform 0.2s ease;
+    }
+
+    .phone:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 40px;
+    }
+
+    footer a {
+      color: #f09d91;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function copyPhoneNumber() {
+      const phone = "+963 956 880 515";
+      navigator.clipboard.writeText(phone).then(() => {
+        alert("تم نسخ الرقم: " + phone);
+      }, () => {
+        prompt("فشل النسخ تلقائيًا، يرجى نسخ الرقم يدويًا:", phone);
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="شعار البوتيك" class="logo">
+    <h1>مرحباً بكم في متجر بتويك إيفر إليجنت</h1>
+    <p class="subtitle">الاختيار المثالي لأفضل الملابس الأوروبية</p>
+  </header>
+
+  <div class="social-icons">
+    <div class="social-icon">
+      <a href="https://www.facebook.com/"  target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"  alt="فيسبوك">
+        <span>فيسبوك</span>
+      </a>
+    </div>
+    <div class="social-icon">
+      <a href="https://wa.me/963956880515"  target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"  alt="واتساب">
+        <span>واتساب</span>
+      </a>
+    </div>
+    <div class="social-icon">
+      <a href="https://www.instagram.com/"  target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"  alt="إنستغرام">
+        <span>إنستغرام</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="address">
+    موقعنا: حلب - الجميلية جانب فطائر السندباد
+  </div>
+
+  <div class="phone" onclick="copyPhoneNumber()">
+    اتصل بنا: 0956880515
+  </div>
+
+  <footer>
+    تم التصميم بواسطة <a href="https://www.instagram.com/fateh_moathen/"  target="_blank">فاتح</a>
+  </footer>
+
+</body>
+</html>
